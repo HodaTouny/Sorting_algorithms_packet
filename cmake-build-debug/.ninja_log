@@ -1,0 +1,17 @@
+# ninja log v5
+1	2139	7003396678862461	CMakeFiles/Sorting_algorithms_packet.dir/main.cpp.obj	5780cf009cbf1830
+2146	2387	7003396681299500	Sorting_algorithms_packet.exe	1ebc84c758c6c791
+4	7301	7003617439726254	CMakeFiles/Sorting_algorithms_packet.dir/main.cpp.obj	5780cf009cbf1830
+7303	7888	7003617445339838	Sorting_algorithms_packet.exe	1ebc84c758c6c791
+8	3981	7003617889186646	CMakeFiles/Sorting_algorithms_packet.dir/main.cpp.obj	5780cf009cbf1830
+3983	4451	7003617893880353	Sorting_algorithms_packet.exe	1ebc84c758c6c791
+8	3226	7003618990323192	CMakeFiles/Sorting_algorithms_packet.dir/main.cpp.obj	5780cf009cbf1830
+3228	3539	7003618993619847	Sorting_algorithms_packet.exe	1ebc84c758c6c791
+7	4446	7003619393531138	CMakeFiles/Sorting_algorithms_packet.dir/main.cpp.obj	5780cf009cbf1830
+4447	4812	7003619396253555	Sorting_algorithms_packet.exe	1ebc84c758c6c791
+5	1726	7003619613299227	CMakeFiles/Sorting_algorithms_packet.dir/main.cpp.obj	5780cf009cbf1830
+1749	2089	7003619616884388	Sorting_algorithms_packet.exe	1ebc84c758c6c791
+7	3317	7003622287316378	CMakeFiles/Sorting_algorithms_packet.dir/main.cpp.obj	5780cf009cbf1830
+3318	3623	7003622290331417	Sorting_algorithms_packet.exe	1ebc84c758c6c791
+6	1705	7003622656433854	CMakeFiles/Sorting_algorithms_packet.dir/main.cpp.obj	5780cf009cbf1830
+1706	1864	7003622657990655	Sorting_algorithms_packet.exe	1ebc84c758c6c791
