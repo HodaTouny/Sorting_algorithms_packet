@@ -4,22 +4,29 @@
 using namespace std;
 
 int main() {
-    int size = 100;
-    int * arr = generateRandomArray<int>(0,100,size);
-    print(arr,size);
-    cout<<endl;
-    Selection_sort(arr,size);
-    print(arr,size);
-    int size2 = 1000;
-    int * arr2 = generateRandomArray<int>(0,1000,size2);
-    print(arr2,size2);
-    cout<<endl;
-   shell_sort(arr2,size2);
-    print(arr2,size2);
-cout<<endl;
-int arr3[]={4,6,1,2,50,0,4};
-    shell_sort(arr3,7);
-    print (arr3,7);
+    int size_200 = 200;
+    int * arr_200 = generateRandomArray<int>(0,10000,size_200);
 
+    int size_500 = 500;
+    char * arr_500 = generateRandomArray<char>('a','z',size_500);
+
+    int size_1000 = 1000;
+    int * arr_1000 = generateRandomArray<int>(0,10000,size_1000);
+
+    int size_5000 = 5000;
+    int * arr_5000 = generateRandomArray<int>(0,10000,size_5000);
+
+    int size_10000 = 10000;
+    int * arr_10000 = generateRandomArray<int>(0,10000,size_10000);
+
+    int size_20000 = 20000;
+    int * arr_20000 = generateRandomArray<int>(0,10000,size_20000);
+
+    int size_50000 = 50000;
+    int * arr_50000 = generateRandomArray<int>(0,10000,size_50000);
+
+
+    quick_sort(arr_50000,0,size_50000-1);
+    print(arr_50000,size_50000);
     return 0;
 }

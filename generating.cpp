@@ -10,7 +10,11 @@ T* generateRandomArray(T min_val, T max_val, int size) {
 template<typename T>
 void print(T*arr, int size){
     for(int i=0;i<size;i++){
-        cout<<arr[i]<<" ";
+        if(i<size-1) {
+            cout << arr[i] << " - ";
+        }else{
+            cout<<arr[i];
+        }
     }
     cout<<"\n";
 }
