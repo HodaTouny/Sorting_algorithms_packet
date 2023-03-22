@@ -26,7 +26,7 @@ int main() {
     int * arr_50000 = generateRandomArray<int>(0,10000,size_50000);
 
 
-    quick_sort(arr_50000,0,size_50000-1);
-    print(arr_50000,size_50000);
+    quick_sort(arr_500,size_500);
+    print(arr_500,size_500);
     return 0;
 }

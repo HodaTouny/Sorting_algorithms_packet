@@ -72,54 +72,82 @@ void bubble_sort(T arr[],int n){
             break;
         }
 }}
-//template<typename T>
-//int sort_pivot(T arr[],int min,int max){
-//    int piv = arr[min];
-//    int i = min;
-//    for(int j=min+1;j<=max;j++){
-//        if(arr[j]<piv){
-//            i++;
-//            swap(arr[i],arr[j]);
-//        }
-//    }
-//    swap(arr[i],arr[min]);
-//    return i;
-//
-//}
-//
-//template<typename T>
-//void quick_sort(T arr[],int min,int n){
-//    if(min>=n){
-//        return;
-//    }
-//        int pivot = sort_pivot(arr, min, n);
-//        quick_sort(arr, min, pivot - 1);
-//        quick_sort(arr, pivot + 1, n);
-//
-//}
 
 template<typename T>
-int sort_pivot(T arr[],int min,int max){
+void quicksort(T arr[],int min,int n){
+    if(min>=n){
+        return;
+    }
     int piv = arr[min];
     int i = min;
-    for(int j=min;j<=max;j++){
+    for(int j=min;j<=n;j++){
         if(arr[j]<piv){
             i++;
             swap(arr[i],arr[j]);
         }
     }
     swap(arr[i],arr[min]);
-    return i;
+
+    int pivot = i;
+    quicksort(arr, min, pivot - 1);
+    quicksort(arr, pivot + 1, n);
 
 }
 
 template<typename T>
-void quick_sort(T arr[],int min,int n){
-    if(min>=n){
-        return;
-    }
-    int pivot = sort_pivot(arr, min, n);
-    quick_sort(arr, min, pivot - 1);
-    quick_sort(arr, pivot + 1, n);
-
+void quick_sort(T arr[],int n){
+    quicksort(arr,0,n-1);
 }
+
+
+//template <typename T>
+//double time_execution(void (*sorting_algorithm)(T*, T), T* arr, int n) {
+//    using std::chrono::duration;
+//    using std::chrono::milliseconds;
+//    using std::chrono::high_resolution_clock;
+//    using std::chrono::duration_cast;
+//    auto t1 = high_resolution_clock::now();
+//    sorting_algorithm(arr,n);
+//    auto t2 = high_resolution_clock::now();
+//    /* Getting number of milliseconds as a double. */
+//    duration<double, std::milli> ms_double = t2 - t1;
+//    return ms_double.count();
+//}
+//template <class T>
+//void randomization (T arr[] , int n)
+//{
+//    srand(time(0));
+//    for (int i = 0; i < n; i++) {
+//        arr[i] = rand();
+//    }
+//}
+//void functions (int n){
+//    int arr1[n];
+// //    randomization(arr1,n);
+// //    double insertion_sort_time = time_execution(insertion_sort, arr1 , n );
+// //    cout << "Insertion sort execution time: " <<  fixed << setprecision(5) << insertion_sort_time  <<" Milliseconds" << endl;
+//
+//    randomization(arr1,n);
+//    double selection_sort_time = time_execution(Selection_sort, arr1 , n );
+//    cout << "Selection sort execution time: " <<  fixed << setprecision(5) << selection_sort_time  <<" Milliseconds" << endl;
+//
+//    randomization(arr1,n);
+//    double bubble_sort_time = time_execution(bubble_sort, arr1 , n );
+//    cout << "Bubble sort execution time: " <<  fixed << setprecision(5) << bubble_sort_time  <<" Milliseconds" << endl;
+//
+// //    randomization(arr1,n);
+// //    double merge_sort_time = time_execution(merge_sort, arr1 , n );
+// //    cout << "Merge sort execution time: " <<  fixed << setprecision(5) << merge_sort_time  <<" Milliseconds" << endl;
+//
+//    randomization(arr1,n);
+//    double shell_sort_time = time_execution(shell_sort, arr1 , n );
+//    cout << "Shell sort execution time: " <<  fixed << setprecision(5) << shell_sort_time  <<" Milliseconds" << endl;
+//
+// //    randomization(arr1,n);
+// //    double quick_sort_time = time_execution(quick_sort, arr1 ,0, n );
+// //    cout << "Quick sort execution time: " <<  fixed << setprecision(5) << quick_sort_time  <<" Milliseconds" << endl;
+//
+//    randomization(arr1,n);
+//    double count_sort_time = time_execution(count_sort, arr1 , n );
+//    cout << "Count sort execution time: " <<  fixed << setprecision(5) << count_sort_time  <<" Milliseconds" << endl;
+//}
