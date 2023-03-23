@@ -98,6 +98,83 @@ template<typename T>
 void quick_sort(T arr[],int n){
     quicksort(arr,0,n-1);
 }
+template<class T>
+void insertion_sort(T arr[], int n)
+{
+    int i, j;
+    T temp;
+
+    for (int i = 1; i < n; ++i)
+    {
+
+        temp = arr[i];
+        j = i - 1;
+
+        while (j >= 0 && arr[j] > temp)
+        {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+
+        arr[j + 1] = temp;
+
+    }
+}
+template<class T>
+void mergesort(T arr[], int start, int end)
+{
+
+    int z, x, y, mid;
+    vector<T> temp(end -start + 1);
+    mid = (start + end) / 2;
+    z = 0;
+    x = start;
+    y = mid + 1;
+
+    while (x <= mid && y <= end)
+    {
+        if (arr[x] < arr[y])
+        {
+            temp[z] = arr[x];
+            ++x, ++z;
+        }
+        else
+        {
+            temp[z] = arr[y];
+            ++y, ++z;
+        }
+    }
+
+    while (x <= mid)
+    {
+        temp[z] = arr[x];
+        ++x, ++z;
+    }
+
+    while (y <= end)
+    {
+        temp[z] = arr[y];
+        ++y, ++z;
+    }
+    for (int i = start; i <= end; ++i)
+    {
+        arr[i] = temp[i - start];
+    }
+
+}
+template<typename T>
+void merge_sort(T arr[], int start, int end)
+{
+
+    if (start < end)
+    {
+        int mid = (start + end) / 2;
+        MergeSort(arr, start, mid);
+        MergeSort(arr, mid + 1, end);
+        Merge(arr, start, end);
+    }
+
+}
 
 
 //template <typename T>
