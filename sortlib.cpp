@@ -183,54 +183,67 @@ void merge_sort(T arr[], int n){
     MergeSort(arr,0,n);
 }
 
-//template <typename T>
-//double time_execution(void (*sorting_algorithm)(T*, T), T* arr, int n) {
-//    using std::chrono::duration;
-//    using std::chrono::milliseconds;
-//    using std::chrono::high_resolution_clock;
-//    using std::chrono::duration_cast;
-//    auto t1 = high_resolution_clock::now();
-//    sorting_algorithm(arr,n);
-//    auto t2 = high_resolution_clock::now();
-//    /* Getting number of milliseconds as a double. */
-//    duration<double, std::milli> ms_double = t2 - t1;
-//    return ms_double.count();
-//}
-//template <class T>
-//void randomization (T arr[] , int n)
-//{
-//    srand(time(0));
-//    for (int i = 0; i < n; i++) {
-//        arr[i] = rand();
-//    }
-//}
-//void functions (int n){
-//    int arr1[n];
-// //    randomization(arr1,n);
-// //    double insertion_sort_time = time_execution(insertion_sort, arr1 , n );
-// //    cout << "Insertion sort execution time: " <<  fixed << setprecision(5) << insertion_sort_time  <<" Milliseconds" << endl;
-//
-//    randomization(arr1,n);
-//    double selection_sort_time = time_execution(Selection_sort, arr1 , n );
-//    cout << "Selection sort execution time: " <<  fixed << setprecision(5) << selection_sort_time  <<" Milliseconds" << endl;
-//
-//    randomization(arr1,n);
-//    double bubble_sort_time = time_execution(bubble_sort, arr1 , n );
-//    cout << "Bubble sort execution time: " <<  fixed << setprecision(5) << bubble_sort_time  <<" Milliseconds" << endl;
-//
-// //    randomization(arr1,n);
-// //    double merge_sort_time = time_execution(merge_sort, arr1 , n );
-// //    cout << "Merge sort execution time: " <<  fixed << setprecision(5) << merge_sort_time  <<" Milliseconds" << endl;
-//
-//    randomization(arr1,n);
-//    double shell_sort_time = time_execution(shell_sort, arr1 , n );
-//    cout << "Shell sort execution time: " <<  fixed << setprecision(5) << shell_sort_time  <<" Milliseconds" << endl;
-//
-// //    randomization(arr1,n);
-// //    double quick_sort_time = time_execution(quick_sort, arr1 ,0, n );
-// //    cout << "Quick sort execution time: " <<  fixed << setprecision(5) << quick_sort_time  <<" Milliseconds" << endl;
-//
-//    randomization(arr1,n);
-//    double count_sort_time = time_execution(count_sort, arr1 , n );
-//    cout << "Count sort execution time: " <<  fixed << setprecision(5) << count_sort_time  <<" Milliseconds" << endl;
-//}
+template <typename T>
+double time_execution(void (*sorting_algorithm)(T*, T), T* arr, int n) {
+    using std::chrono::duration;
+    using std::chrono::milliseconds;
+    using std::chrono::high_resolution_clock;
+    using std::chrono::duration_cast;
+    auto t1 = high_resolution_clock::now();
+    sorting_algorithm(arr,n);
+    auto t2 = high_resolution_clock::now();
+    /* Getting number of milliseconds as a double. */
+    duration<double, std::milli> ms_double = t2 - t1;
+    return ms_double.count();
+}
+template <class T>
+void randomization (T arr[] , int n)
+{
+    srand(time(0));
+    for (int i = 0; i < n; i++) {
+        arr[i] = rand();
+    }
+}
+void functions (int n){
+    int arr1[n];
+     randomization(arr1,n);
+     double insertion_sort_time = time_execution(insertion_sort, arr1 , n );
+     cout << "Insertion sort execution time: " <<  fixed << setprecision(5) << insertion_sort_time  <<" Milliseconds" << endl;
+
+    randomization(arr1,n);
+    double selection_sort_time = time_execution(Selection_sort, arr1 , n );
+    cout << "Selection sort execution time: " <<  fixed << setprecision(5) << selection_sort_time  <<" Milliseconds" << endl;
+
+    randomization(arr1,n);
+    double bubble_sort_time = time_execution(bubble_sort, arr1 , n );
+    cout << "Bubble sort execution time: " <<  fixed << setprecision(5) << bubble_sort_time  <<" Milliseconds" << endl;
+
+     randomization(arr1,n);
+     double merge_sort_time = time_execution(merge_sort, arr1 , n );
+     cout << "Merge sort execution time: " <<  fixed << setprecision(5) << merge_sort_time  <<" Milliseconds" << endl;
+
+    randomization(arr1,n);
+    double shell_sort_time = time_execution(shell_sort, arr1 , n );
+    cout << "Shell sort execution time: " <<  fixed << setprecision(5) << shell_sort_time  <<" Milliseconds" << endl;
+
+     randomization(arr1,n);
+     double quick_sort_time = time_execution(quick_sort, arr1 , n );
+     cout << "Quick sort execution time: " <<  fixed << setprecision(5) << quick_sort_time  <<" Milliseconds" << endl;
+
+    randomization(arr1,n);
+    double count_sort_time = time_execution(count_sort, arr1 , n );
+    cout << "Count sort execution time: " <<  fixed << setprecision(5) << count_sort_time  <<" Milliseconds" << endl;
+}
+
+
+template<typename T>
+void print(T*arr, int size){
+    for(int i=0;i<size;i++){
+        if(i<size-1) {
+            cout << arr[i] << " - ";
+        }else{
+            cout<<arr[i];
+        }
+    }
+    cout<<"\n";
+}
