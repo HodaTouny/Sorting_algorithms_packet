@@ -101,7 +101,7 @@ void quick_sort(T arr[],int n){
 template<class T>
 void insertion_sort(T arr[], int n)
 {
-    int i, j;
+    int j;
     T temp;
 
     for (int i = 1; i < n; ++i)
@@ -120,8 +120,10 @@ void insertion_sort(T arr[], int n)
 
     }
 }
+
+
 template<class T>
-void mergesort(T arr[], int start, int end)
+void Merge(T arr[], int start, int end)
 {
 
     int z, x, y, mid;
@@ -163,7 +165,7 @@ void mergesort(T arr[], int start, int end)
 
 }
 template<typename T>
-void merge_sort(T arr[], int start, int end)
+void MergeSort(T arr[], int start, int end)
 {
 
     if (start < end)
@@ -176,6 +178,10 @@ void merge_sort(T arr[], int start, int end)
 
 }
 
+template<class T>
+void merge_sort(T arr[], int n){
+    MergeSort(arr,0,n);
+}
 
 //template <typename T>
 //double time_execution(void (*sorting_algorithm)(T*, T), T* arr, int n) {

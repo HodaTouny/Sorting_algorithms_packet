@@ -27,6 +27,8 @@ template<typename T>
 void quick_sort(T arr[], int n);
 
 
+template<class T>
+void Merge(T arr[], int start, int end);
 
 template<typename T>
 void mergesort(T arr[],int start,int end);
